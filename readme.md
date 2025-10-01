@@ -44,6 +44,6 @@ Number of words : 2
 | `sentence`         | STRING  | User-entered sentence                       |
 | `vowels_list`      | STRING  | List of vowels to test                      |
 | `i, j`             | INTEGER | Loop index                                  |
-| `count_characters` | INTEGER | Number of characters (excluding the period) |
-| `count_words`      | INTEGER | Number of words (initialized to 1)          |
+| `count_characters` | INTEGER | Number of characters in the sentence        |
+| `count_words`      | INTEGER | Number of words                             |
 | `count_vowels`     | INTEGER | Number of vowels                            |
