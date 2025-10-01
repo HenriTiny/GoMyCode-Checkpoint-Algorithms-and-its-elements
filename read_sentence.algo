@@ -1,0 +1,37 @@
+ALGORITHM read_sentence
+VAR
+    sentence : STRING;
+    vowels_list : STRING := "aeiouAEIOU" ;
+    i, j, count_vowels: INTEGER := 0 ;
+    count_characters, count_words: INTEGER := 1; //there is always a character/word in a sentence 
+BEGIN
+    Read(sentence);
+    //Start sentence loop
+    FOR i FROM 0 TO sentence.length-1 STEP 1 DO
+        // WHILE Character is not "."
+        IF ( sentence[i] != ".") THEN
+            //start count vowels
+            FOR j FROM 0 TO vowels_list.length-1 STEP 1 DO
+                IF ( sentence[i] == vowels_list[j] ) THEN
+                    count_vowels := count_vowels+1;
+                END_IF
+            END_FOR
+
+            //start count words
+            IF ( sentence[i] == " ") THEN
+                count_words := count_words+1;
+            END_IF
+
+            //start count charaters
+            count_characters := count_characters+1;
+        END_IF;
+
+    END_FOR
+
+    //Display The length of the sentence
+    Write("Length of the sentence : " + count_characters );
+    //The number of words in the sentence 
+    Write("Number of vowels : " +count_vowels );
+    //The number of vowels in the sentence
+    Write("Number of words : " +count_words );
+END
